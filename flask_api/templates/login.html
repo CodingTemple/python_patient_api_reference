@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Please login to receive your token</h1>
+    <div class="container">
+        <form method = 'POST'>
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                <fieldset>
+                    {{ form.email.label }}
+                    {{ form.email(class='form-control', placeholder = 'Add Email Here') }}
+                </fieldset>
+                <fieldset>
+                    {{ form.password.label }}
+                    {{ form.password(class='form-control', placeholder = 'Add Password here') }}
+                </fieldset>
+                {{ form.submit(class='btn btn-success') }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <h3>
+            <textarea name="token" id="token" cols="30" rows="10">
+                {{ results }}
+            </textarea>
+            <a href="{{ url_for('refresh_key') }}"><button>Refresh Token</button></a>
+        </h3>
+    </div>
+{% endblock content %}
